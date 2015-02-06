@@ -1,9 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/aaroncampbell/Projects/swaf-productivity-toolbox/app/config/local'
-let g:netrw_dirhist_2='/Users/aaroncampbell/Projects/swaf-productivity-toolbox/.git'
-let g:netrw_dirhist_3='/Users/aaroncampbell/Projects/swaf-productivity-backup-backup/app/views/pages/report/hp-report'
-let g:netrw_dirhist_4='/Users/aaroncampbell/Projects/swaf-productivity-backup-backup/app/views/includes'
-let g:netrw_dirhist_5='/Users/aaroncampbell/Projects/hub/content/assets/scss'
-let g:netrw_dirhist_6='/Users/aaroncampbell/Projects/swaf-productivity-backup-backup'
-let g:netrw_dirhist_7='/Users/aaroncampbell/dotfiles/ata'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/aaroncampbell/Projects/hub/app/controllers/dash'
+let g:netrw_dirhist_2='/Users/aaroncampbell/Projects/hub/app/views/features/partial'
+let g:netrw_dirhist_3='/Users/aaroncampbell/Projects/toolbox/swaf-productivity-toolbox/app/models/Reports'
+let g:netrw_dirhist_4='/Users/aaroncampbell/Projects/toolbox/swaf-productivity-toolbox/bootstrap'
