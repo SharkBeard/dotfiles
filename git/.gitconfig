@@ -2,6 +2,7 @@
 	path = ~/.git_identity
 [alias]
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	unstage = reset HEAD
 	co = checkout
 	ci = commit -m
 	type = cat-file -t
