@@ -1,6 +1,6 @@
 export PATH=/Applications/MAMP/bin/php/php5.5.14/bin:$PATH
 
-export PS1="\[\033[32m\]\u\[\033[33;1m\]\w\[\033[m\]\$ "
+source ~/.bash_prompt
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 #ls
