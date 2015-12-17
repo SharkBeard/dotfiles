@@ -1,3 +1,7 @@
 #logging
 alias apachelog="tail -f /Applications/MAMP/logs/apache_error.log"
 alias phplog="tail -f /Applications/MAMP/logs/php_error.log"
+
+#Node Stuff
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
