@@ -10,9 +10,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 " Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/tcomment'
+Plugin 'kylef/apiblueprint.vim'
+Plugin 'mechatroner/rainbow_csv'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -39,9 +42,9 @@ let mapleader=","
 
 " Tabs/Indent
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set autoindent
 set copyindent
 

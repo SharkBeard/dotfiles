@@ -5,6 +5,9 @@
 	unstage = reset HEAD
 	co = checkout
 	ci = commit -m
+    s = status
+    aa = add .
+    ca = commit -a -m
 	type = cat-file -t
 	dump = cat-file -p
 	ignore = update-index --assume-unchanged
