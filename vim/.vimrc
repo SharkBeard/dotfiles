@@ -28,6 +28,19 @@ let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 set t_Co=256
 
+" GLOBAL/GENERIC
+" Finding Files
+" Recursive searching from project root
+set path+=**
+
+" Tab complete menu
+set wildmenu
+
+" notes:
+" :find to search for and open file
+" :b searches in buffer
+
+" Syntax Hilighting
 filetype on
 filetype plugin on
 syntax enable
@@ -48,17 +61,33 @@ set shiftwidth=2
 set autoindent
 set copyindent
 
+"Quick command to regen ctags
+command! MakeTags !ctags -R .
+
+" notes:
+" ^] to jump to definition
+" ^t to jump back up
+" ^n to autocomplete
+" ^p back
+" ^x^n autocomplete in file
+" ^x^f filetypes only
+" ^x^] tags only
+
+
+" PERSONAL
 " commenly mistyped
 :command! WQ wq
 :command! Wq wq
 :command! W w
 :command! Q q
 
-" windows
+" Split pane navigation
 map <C-J> <C-W>j<C-W>=<C-W>5+<C-W>5>
 map <C-k> <C-W>k<C-W>=<C-W>5+<C-W>5>
 map <C-h> <C-W>h<C-W>=<C-W>5+<C-W>5>
 map <C-l> <C-W>l<C-W>=<C-W>5+<C-W>5>
+
+" Make things harder for myself so I learn more
 
 " Konami Code!
 inoremap <up> <nop>
