@@ -1,13 +1,20 @@
+#antergos only
+# >>> Added by cnchi installer
+BROWSER=/usr/bin/chromium
+EDITOR=/usr/bin/nano
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 #maconly
 #export PATH=/Applications/MAMP/bin/php/php5.5.14/bin:$PATH
 
 #rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+#export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 #custom commands / single file installs
 #ex: tldr
-export PATH="$HOME/bin:$PATH"
+#export PATH="$HOME/bin:$PATH"
 
 #prompt
 source ~/.bash_prompt

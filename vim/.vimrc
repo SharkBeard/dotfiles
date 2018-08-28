@@ -4,7 +4,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -16,9 +16,15 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/tcomment'
 Plugin 'kylef/apiblueprint.vim'
 Plugin 'mechatroner/rainbow_csv'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'posva/vim-vue'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Syntax Hilighting
+
+syntax enable
+filetype on
+filetype plugin on
+filetype plugin indent on    " required for Vundle
 
 " Airline
 set laststatus=2
@@ -39,11 +45,6 @@ set wildmenu
 " notes:
 " :find to search for and open file
 " :b searches in buffer
-
-" Syntax Hilighting
-filetype on
-filetype plugin on
-syntax enable
 
 let &titlestring = @%
 
