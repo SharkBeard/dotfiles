@@ -8,16 +8,37 @@ call vundle#rc()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
+" tpope
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+" Theme
 Plugin 'bling/vim-airline'
-" Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/tcomment'
 Plugin 'kylef/apiblueprint.vim'
+" Search
+Plugin 'mileszs/ack.vim'
+" Nerdtree
+Plugin 'scrooloose/nerdtree'
+
+" Syntax
+"   Hilighting
 Plugin 'mechatroner/rainbow_csv'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'posva/vim-vue'
+"   Checking
+Plugin 'vim-syntastic/syntastic'
+
+" Linting
+Plugin 'w0rp/ale'
+" Tmux
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Search
+let g:ackprg = 'ag --vimgrep --smart-case'                                                   
+cnoreabbrev ag Ack                                                                           
+cnoreabbrev aG Ack                                                                           
+cnoreabbrev Ag Ack                                                                           
+cnoreabbrev AG Ack 
 
 " Syntax Hilighting
 
@@ -41,10 +62,17 @@ set path+=**
 
 " Tab complete menu
 set wildmenu
+set wildmode=list:longest,full
 
 " notes:
 " :find to search for and open file
 " :b searches in buffer
+" :ls lists buffers
+
+" ALE
+let g:ale_sign_warning = '💩'
+highlight clear ALEWarningSign
+:highlight SignColumn ctermbg=none
 
 let &titlestring = @%
 
@@ -82,11 +110,21 @@ command! MakeTags !ctags -R .
 :command! W w
 :command! Q q
 
+" Shortcuts
+:command! NT NERDTree
+" :command -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!
+
+" Custom commands
+:command! SS w | !spring stop
+:command! FS s/"/'/g
+:command! FC s/#/# /g
+:command! FF normal! ddpkJ<<
+
 " Split pane navigation
-map <C-J> <C-W>j<C-W>=<C-W>5+<C-W>5>
-map <C-k> <C-W>k<C-W>=<C-W>5+<C-W>5>
-map <C-h> <C-W>h<C-W>=<C-W>5+<C-W>5>
-map <C-l> <C-W>l<C-W>=<C-W>5+<C-W>5>
+" map <C-J> <C-W>j<C-W>=<C-W>5+<C-W>5>
+" map <C-k> <C-W>k<C-W>=<C-W>5+<C-W>5>
+" map <C-h> <C-W>h<C-W>=<C-W>5+<C-W>5>
+" map <C-l> <C-W>l<C-W>=<C-W>5+<C-W>5>
 
 " Make things harder for myself so I learn more
 
@@ -104,3 +142,9 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
+
+map <ESC>[1;5D <C-left>
+map <ESC>[1;5C <C-right>
+
+noremap <C-Left> <nop>
+noremap <C-Right> <nop>
