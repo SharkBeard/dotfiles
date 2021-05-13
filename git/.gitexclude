@@ -8,3 +8,5 @@ tags
 .idea/*
 .rakeTasks
 .generators
+*/.DS_STORE
+*.bak

@@ -28,3 +28,6 @@
   # autocrlf = false
 [push]
   default = current
+[user]
+	name = Aaron Campbell
+	email = sharkbeardio@gmail.com
